@@ -23,9 +23,9 @@ export default {
     <main>
 
         <!-- Service Key Features -->
-        <section>
-            <div class="container py-4">
-                <div class="row text-center">
+        <section class="overlap">
+            <div class="container py-4 bg-white">
+                <div class="row text-center py-4">
                     <div v-for="feature in store.keyFeatures" class="col">
                         <span class="text-uppercase"><i :class="feature.icon"></i> {{ feature.title }}</span>
                     </div>
@@ -51,10 +51,8 @@ export default {
                 </div>
             </div>
 
-            <div class="container-fluid">
-                <div class="row" id="order-discount">
-                    <img src="/svg-0.svg" alt="" class="h-75">
-                </div>
+            <div class="container-fluid" id="order-discount">
+                <img src="/svg-0.svg" alt="" class="h-75">
             </div>
         </section>
 
@@ -62,7 +60,7 @@ export default {
         <!-- Menu -->
 
         <section>
-            <SectionTitle title="menu categories" />
+            <SectionTitle title="menu categories" btnTitle="view the full menu" btnHref="#" />
         </section>
 
     </main>

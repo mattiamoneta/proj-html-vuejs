@@ -19,10 +19,42 @@ h6 {
     font-family: 'Barlow', sans-serif;
 }
 
+
+/* HEADER */
+header {
+    background-image: url('/home-background-hero-scaled.jpg');
+    background-position: center;
+}
+
+
+.v-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+}
+
+/* KEY FEATURES */
+
+.overlap {
+    margin-top: -50px;
+}
+
+/* DISHES */
+
 #order-discount {
-    background-image: url('../../public/first-order-background-scaled.jpg');
+    position: relative;
+    background-image: url('/first-order-background-scaled.jpg');
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     height: 60vh;
+
+    & img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 50%;
+    }
 }

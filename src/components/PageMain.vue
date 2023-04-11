@@ -5,6 +5,7 @@ import { store } from '../store';
 import SectionTitle from './SectionTitle.vue';
 import DishesCard from './DishesCard.vue';
 import MenuCategory from './MenuCategory.vue';
+import BlogPost from './BlogPost.vue';
 
 export default {
     name: 'PageMain',
@@ -16,7 +17,8 @@ export default {
     components: {
         SectionTitle,
         DishesCard,
-        MenuCategory
+        MenuCategory,
+        BlogPost
     }
 }
 </script>
@@ -61,7 +63,6 @@ export default {
 
 
         <!-- Menu -->
-
         <section class="mb-5">
             <SectionTitle title="menu categories" btnTitle="view the full menu" btnHref="#" />
 
@@ -84,7 +85,6 @@ export default {
         </section>
 
         <!-- Hero Section -->
-
         <section id="bg-phone">
             <div class="container py-5">
                 <div class="row py-5">
@@ -101,6 +101,22 @@ export default {
                 </div>
             </div>
         </section>
+
+        <!-- News -->
+        <section class="py-5">
+
+            <SectionTitle title="latest news" btnTitle="read more news" btnHref="#" />
+
+           <div class="container">
+            <div class="row">
+                <div class="col" v-for="post in store.posts">
+                    <BlogPost :title="post.title" :image="post.thumbnail" :content="post.content" />
+                </div>
+            </div>
+           </div>
+        </section>
+
+
 
     </main>
 </template>

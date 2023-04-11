@@ -1,97 +1,22 @@
 <script>
 
+//Global State
+import { store } from './store.js';
+
 import PageHeader from './components/PageHeader.vue';
 import PageFooter from './components/PageFooter.vue';
+import PageMain from './components/PageMain.vue'
 
 export default {
   data() {
     return {
-      linksNavbar: [
-        {
-          title: 'Home',
-          url: '#'
-        }, {
-          title: 'Order Online',
-          url: '#'
-        }, {
-          title: 'About',
-          url: '#'
-        }, {
-          title: 'News',
-          url: '#'
-        }, {
-          title: 'Contact Us',
-          url: '#'
-        },
-      ],
-      linksNavigate: [
-        {
-          title: 'Home',
-          url: '#'
-        }, {
-          title: 'Alternate Home',
-          url: '#'
-        }, {
-          title: 'Menu',
-          url: '#'
-        }, {
-          title: 'About',
-          url: '#'
-        }, {
-          title: 'News',
-          url: '#'
-        }, {
-          title: 'Contact Us',
-          url: '#'
-        }, {
-          title: 'Cart',
-          url: '#'
-        },
-      ],
-      linksOrder: [
-        {
-          title: 'Appetizers',
-          url: '#'
-        }, {
-          title: 'Burgers',
-          url: '#'
-        }, {
-          title: 'Pizza',
-          url: '#'
-        }, {
-          title: 'Fries',
-          url: '#'
-        }, {
-          title: 'Sides',
-          url: '#'
-        }, {
-          title: 'Desserts',
-          url: '#'
-        }, {
-          title: 'Beverages',
-          url: '#'
-        }, {
-          title: 'Specials',
-          url: '#'
-        },
-      ],
-      linksInfos: [
-        {
-          title: 'My Account',
-          url: '#'
-        }, {
-          title: 'Terms Of Service',
-          url: '#'
-        }, {
-          title: 'Privacy Policy',
-          url: '#'
-        },
-      ],
+      store
     }
   },
   components: {
     PageHeader,
-    PageFooter
+    PageFooter,
+    PageMain
   }
 }
 
@@ -99,11 +24,8 @@ export default {
 
 <template>
   <!-- Navbar & Jumbotron -->
-  <PageHeader :navLinks="linksNavbar" />
-
-  <main>
-
-  </main>
+  <PageHeader />
+  <PageMain />
   <PageFooter />
 </template>
 

@@ -18,3 +18,11 @@ h5,
 h6 {
     font-family: 'Barlow', sans-serif;
 }
+
+#order-discount {
+    background-image: url('../../public/first-order-background-scaled.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+}

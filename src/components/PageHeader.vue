@@ -1,8 +1,13 @@
 <script>
+
+import { store } from '../store.js';
+
 export default {
     name: 'PageHeader',
-    props: {
-        navLinks: Array
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>
@@ -13,7 +18,7 @@ export default {
         <nav class="navbar navbar-expand-lg bg-body-tertiary py-4">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    LOGO
+                    <img src="/takeout-logo.png" alt="">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -23,7 +28,7 @@ export default {
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item" v-for="link in navLinks">
+                        <li class="nav-item" v-for="link in store.linksNavbar">
                             <a class="nav-link" aria-current="page" :href="link.href">{{ link.title }}</a>
                         </li>
                         <li class="nav-item">

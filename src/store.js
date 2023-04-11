@@ -90,6 +90,54 @@ export const store = reactive({
             url: '#'
         },
     ],
+    linksSocial: [
+        {
+            icon: 'fa-brands fa-facebook-f',
+            href: "#"
+        }, {
+            icon: 'fa-brands fa-twitter',
+            href: "#"
+        }, {
+            icon: 'fa-brands fa-instagram',
+            href: "#"
+        }, {
+            icon: 'fa-brands fa-linkedin',
+            href: "#"
+        }, {
+            icon: 'fa-solid fa-rss',
+            href: "#"
+        }, {
+            icon: 'fa-brands fa-youtube',
+            href: "#"
+        }, {
+            icon: 'fa-solid fa-envelope',
+            href: "#"
+        },
+    ],
+    openingHours: [
+        {
+            day: 'Mon',
+            hour: '10AM to 11PM'
+        }, {
+            day: 'Tue',
+            hour: '10AM to 11PM'
+        }, {
+            day: 'Wed',
+            hour: '10AM to 11PM'
+        }, {
+            day: 'Thur',
+            hour: '10AM to 11PM'
+        }, {
+            day: 'Fri',
+            hour: '10AM to 11PM'
+        }, {
+            day: 'Sat',
+            hour: '10AM to 11PM'
+        }, {
+            day: 'Sun',
+            hour: '10AM to 11PM'
+        },
+    ],
     keyFeatures: [
         {
             title: '24/7 Delivery',

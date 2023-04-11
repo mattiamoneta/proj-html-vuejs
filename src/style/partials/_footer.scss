@@ -1,0 +1,39 @@
+@use './colors' as *;
+
+/* FOOTER */
+
+footer {
+    background-image: url('/footer-background-scaled.jpg');
+    background-position: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+
+    & img {
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 10px;
+    }
+}
+
+.footer-link-item {
+    text-decoration: none;
+    font-size: .8rem;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-logo {
+    height: 40px;
+}
+
+#footer-coupon {
+    width: 120px;
+}
+
+.social-icon {
+    color: white;
+
+}

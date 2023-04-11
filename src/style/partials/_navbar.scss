@@ -1,0 +1,16 @@
+@use './colors' as *;
+
+/* NAVBAR */
+
+.ms-nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 8px 10px;
+    transition: all .2s ease;
+
+    &:hover {
+        color: $ms-color-goldenrod;
+        cursor: pointer;
+    }
+}

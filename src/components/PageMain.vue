@@ -4,6 +4,7 @@ import { store } from '../store';
 
 import SectionTitle from './SectionTitle.vue';
 import DishesCard from './DishesCard.vue';
+import MenuCategory from './MenuCategory.vue';
 
 export default {
     name: 'PageMain',
@@ -14,7 +15,8 @@ export default {
     },
     components: {
         SectionTitle,
-        DishesCard
+        DishesCard,
+        MenuCategory
     }
 }
 </script>
@@ -27,7 +29,8 @@ export default {
             <div class="container py-4 bg-white">
                 <div class="row text-center py-4">
                     <div v-for="feature in store.keyFeatures" class="col">
-                        <span class="text-uppercase"><i :class="feature.icon"></i> {{ feature.title }}</span>
+                        <h5 class="text-uppercase small text-secondary"><i :class="feature.icon" class="me-2"></i> {{
+                            feature.title }}</h5>
                     </div>
 
                 </div>
@@ -46,7 +49,7 @@ export default {
 
                 <div class="row py-5">
                     <div class="col text-center">
-                        <a href="#" class="btn btn-primary">START YOUR ORDER</a>
+                        <a href="#" class="btn-pill">start your order <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -59,8 +62,44 @@ export default {
 
         <!-- Menu -->
 
-        <section>
+        <section class="mb-5">
             <SectionTitle title="menu categories" btnTitle="view the full menu" btnHref="#" />
+
+            <div class="container">
+                <div class="row row-cols-4 g-3">
+                    <div class="col" v-for="item in store.linksOrder">
+                        <MenuCategory :title="item.title" :image="item.image" />
+                    </div>
+                </div>
+
+                <!-- Menu Features -->
+                <div class="row row-cols-4 pb-5">
+                    <div v-for="feature in store.menuFeatures" class="col text-center py-5">
+                        <i :class="feature.icon" class="fa-3x mb-4"></i>
+                        <h5 class="text-uppercase small">{{ feature.title }}</h5>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Hero Section -->
+
+        <section id="bg-phone">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col">
+                        <h4 class="text-white">Download Our</h4>
+                        <h1 class="text-goldenrod">Ordering App</h1>
+
+                        <div class="app-download mt-5">
+                            <img src="/app-store-badge.png" alt="App Store Download" class="me-3">
+                            <img src="/play-store-badge.png" alt="Play Store Download">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>

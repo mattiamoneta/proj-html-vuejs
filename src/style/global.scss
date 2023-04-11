@@ -1,4 +1,6 @@
 @use './partials/colors' as *;
+@use './partials/controls' as *;
+@use './partials/navbar' as *;
 @use 'bootstrap' as *;
 
 *,
@@ -7,6 +9,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+* {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -17,7 +22,23 @@ h4,
 h5,
 h6 {
     font-family: 'Barlow', sans-serif;
+    line-height: 98%;
+
+    & span {
+        font-family: 'Barlow', sans-serif;
+    }
 }
+
+
+h1 {
+    font-size: 5.5rem;
+    letter-spacing: -4px;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
 
 
 /* HEADER */
@@ -56,5 +77,16 @@ header {
         top: 0;
         width: 100%;
         height: 50%;
+    }
+}
+
+/* HERO */
+
+#bg-phone {
+    background-image: url('/app-ordering-scaled.jpg');
+    background-position: center;
+
+    & .app-download img {
+        height: 50px;
     }
 }

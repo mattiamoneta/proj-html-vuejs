@@ -1,0 +1,21 @@
+@use './colors' as *;
+
+/* CONTROLS */
+
+.btn-pill {
+    background-color: $ms-color-cardinal;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1.5px;
+    border-radius: 30px;
+    font-size: .8rem;
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, .5);
+        color: white;
+    }
+}

@@ -46,27 +46,35 @@ export const store = reactive({
     linksOrder: [
         {
             title: 'Appetizers',
+            image: '/appetizers-menu-background.jpg',
             url: '#'
         }, {
             title: 'Burgers',
+            image: '/burgers-menu-background.jpg',
             url: '#'
         }, {
             title: 'Pizza',
+            image: '/pizza-menu-background.jpg',
             url: '#'
         }, {
             title: 'Fries',
+            image: '/fries-menu-background.jpg',
             url: '#'
         }, {
             title: 'Sides',
+            image: '/sides-menu-background.jpg',
             url: '#'
         }, {
             title: 'Desserts',
+            image: '/desserts-menu-background.jpg',
             url: '#'
         }, {
             title: 'Beverages',
+            image: '/beverages-menu-background.jpg',
             url: '#'
         }, {
             title: 'Specials',
+            image: '/specials-menu-background.jpg',
             url: '#'
         },
     ],
@@ -88,13 +96,29 @@ export const store = reactive({
             icon: 'fa-regular fa-clock'
         }, {
             title: 'over 100 dishes',
-            icon: 'fa-regular fa-clock'
+            icon: 'fa-solid fa-burger'
         }, {
             title: 'in app ordering',
-            icon: 'fa-regular fa-clock'
+            icon: 'fa-solid fa-mobile'
         }, {
             title: 'fast delivery',
-            icon: 'fa-regular fa-clock'
+            icon: 'fa-solid fa-car'
+        },
+    ],
+
+    menuFeatures: [
+        {
+            title: 'Vegetarian',
+            icon: 'fa-solid fa-leaf'
+        }, {
+            title: 'Gluten Free',
+            icon: 'fa-solid fa-seedling'
+        }, {
+            title: 'Dairy Free',
+            icon: 'fa-solid fa-cow'
+        }, {
+            title: 'Keto Friendly',
+            icon: 'fa-solid fa-drumstick-bite'
         },
     ],
 

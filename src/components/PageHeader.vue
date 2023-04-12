@@ -66,9 +66,10 @@ export default {
             <!-- Jumbotron -->
             <div class="row">
                 <div class="col-lg-5 v-center text-center text-sm-start">
-                    <h2 class="text-white">Hungry?</h2>
-                    <h1 class="text-goldenrod mb-5">Great Food <span class="d-block text-white">Delivered</span></h1>
-                    <a href="#" class="btn-pill">view our menu <i class="fa-solid fa-arrow-right"></i></a>
+                    <h2 class="text-white text-slide-in-d2">Hungry?</h2>
+                    <h1 class="text-goldenrod mb-5 text-slide-in-d1">Great Food <span
+                            class="d-block text-white">Delivered</span></h1>
+                    <a href="#" class="btn-pill text-slide-in-d3 ">view our menu <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

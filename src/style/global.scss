@@ -2,6 +2,7 @@
 @use './partials/controls' as *;
 @use './partials/navbar' as *;
 @use './partials/footer' as *;
+@use './partials/animations' as *;
 @use 'bootstrap' as *;
 
 *,
@@ -84,6 +85,9 @@ header {
         height: 50px;
     }
 }
+
+
+/* BREAKPOINTS */
 
 @media screen and (min-width: 992px) {
     .v-center {

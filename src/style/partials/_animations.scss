@@ -1,0 +1,34 @@
+/* ANIMATIONS */
+
+.text-slide-in-d1 {
+    animation: anim-text-slide-in-d1 .8s ease;
+}
+
+.text-slide-in-d2 {
+    animation: anim-text-slide-in-d1 .6s ease;
+}
+
+.text-slide-in-d3 {
+    animation: anim-text-fade-in-d3 1s ease;
+}
+
+@keyframes anim-text-slide-in-d1 {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes anim-text-fade-in-d3 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

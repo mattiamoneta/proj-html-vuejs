@@ -4,6 +4,20 @@ $def-padding: 10px 30px;
 
 /* CONTROLS */
 
+.btn-rounded {
+    display: inline-block;
+    background-color: $ms-color-marshland;
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+
+    transition: all .3s ease;
+}
+
 .btn-pill {
     background-color: $ms-color-cardinal;
     color: white;
@@ -24,7 +38,7 @@ $def-padding: 10px 30px;
 }
 
 
-input[type='text'] {
+input[type='email'] {
     padding: $def-padding;
     border-radius: 25px;
     border: none;

@@ -5,6 +5,7 @@
 footer {
     background-image: url('/footer-background-scaled.jpg');
     background-position: center;
+    background-size: cover;
 }
 
 .footer-links {
@@ -23,6 +24,19 @@ footer {
     font-size: .8rem;
     color: white;
     font-weight: bold;
+    transition: all .2s ease;
+}
+
+.footer-link-item.non-clickable:hover {
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}
+
+.footer-link-item:hover {
+    color: $ms-color-goldenrod;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .footer-logo {
@@ -35,5 +49,9 @@ footer {
 
 .social-icon {
     color: white;
+    transition: all .2s ease;
 
+    &:hover {
+        color: $ms-color-goldenrod;
+    }
 }

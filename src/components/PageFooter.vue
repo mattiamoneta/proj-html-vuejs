@@ -17,7 +17,7 @@ export default {
             <div class="row">
 
                 <!-- Order -->
-                <div class="col">
+                <div class="col-lg col-xs-12 col-md-6 text-center text-lg-start">
                     <h5 class="text-uppercase text-white small mb-4">order online</h5>
                     <ul class="footer-links">
                         <li v-for="link in store.linksOrder" class="mb-2">
@@ -27,7 +27,7 @@ export default {
                 </div>
 
                 <!-- Navigate -->
-                <div class="col">
+                <div class="col-lg col-xs-12 col-md-6 text-center text-lg-start">
                     <h5 class="text-uppercase text-white small mb-4">navigate</h5>
                     <ul class="footer-links">
                         <li v-for="link in store.linksNavigate" class="mb-2">
@@ -37,33 +37,33 @@ export default {
                 </div>
 
                 <!-- Information -->
-                <div class="col">
+                <div class="col-lg col-xs-12 col-md-6 text-center text-lg-start">
                     <h5 class="text-uppercase text-white small mb-4">information</h5>
                     <ul class="footer-links">
                         <li v-for="link in store.linksInfos" class="mb-2">
                             <a :href="link.href" class="footer-link-item">{{ link.title }}</a>
                         </li>
                         <li class="mt-4 mb-2">
-                            <img src="/app-store-badge.png" alt="AppStore">
+                            <a href="#"><img src="/app-store-badge.png" alt="AppStore"></a>
                         </li>
                         <li>
-                            <img src="/play-store-badge.png" alt="AppStore">
+                            <a href="#"><img src="/play-store-badge.png" alt="AppStore"></a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Opening Hours -->
-                <div class="col">
+                <div class="col-lg col-xs-12 col-md-6 text-center text-lg-start">
                     <h5 class="text-uppercase text-white small mb-4">opening hours</h5>
                     <ul class="footer-links">
-                        <li v-for="hours in store.openingHours" class="footer-link-item mb-2">{{ hours.day }} - <span
-                                class="text-goldenrod">{{
-                                    hours.hour }}</span></li>
+                        <li v-for="hours in store.openingHours" class="footer-link-item non-clickable mb-2">{{ hours.day }}
+                            - <span class="text-goldenrod">{{
+                                hours.hour }}</span></li>
                     </ul>
                 </div>
 
                 <!-- Voucher -->
-                <div class="col text-center">
+                <div class="col-lg col-xs-12 text-center pt-sm-5 pt-lg-0 mt-lg-0 mt-sm-5">
                     <h5 class="text-uppercase text-white small mb-4">voucher</h5>
                     <img src="/footer-coupon.png" alt="Coupon" id="footer-coupon">
                     <div class="mt-3">
@@ -83,12 +83,12 @@ export default {
 
             <!-- Form -->
             <div class="row text-center">
-                <div class="col-6 m-auto">
+                <div class="col-lg-6 col-12 m-auto">
                     <h2 class="text-goldenrod">Stay in the loop</h2>
                     <p class="text-white small">Sign up to receive up to date news and offers directly into your inbox:</p>
                     <div class="form py-4">
-                        <input type="text" placeholder="you@email.com" class="w-100 mb-3">
-                        <a href="#" class="btn-pill d-block">view our menu <i class="fa-solid fa-arrow-right"></i></a>
+                        <input type="email" placeholder="you@email.com" class="w-100 mb-3">
+                        <a href="#" class="btn-pill d-block">subscribe</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@ export default {
                 <div class="col text-center">
                     <ul class="list-inline text-white">
                         <li v-for="social in store.linksSocial" class="list-inline-item"><a :href="social.href"
-                                class="social-icon px-2"></a><i :class="social.icon"></i></li>
+                                class="social-icon p-2"><i :class="social.icon"></i></a></li>
                     </ul>
                 </div>
             </div>

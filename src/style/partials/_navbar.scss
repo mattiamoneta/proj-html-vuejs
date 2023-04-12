@@ -14,3 +14,40 @@
         cursor: pointer;
     }
 }
+
+.nav-toggler {
+    display: none;
+    border: none;
+    background-color: transparent;
+    padding: 0px 10px;
+
+    & .toggler-custom {
+        border: none;
+
+        & .line-1,
+        & .line-2,
+        & .line-3 {
+            background-color: white;
+            height: 3px;
+            width: 30px;
+            margin: 8px 0px;
+
+        }
+    }
+}
+
+.ms-btn-close {
+    padding: 8px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 991px) {
+
+    .nav-toggler {
+        display: inline;
+    }
+
+}

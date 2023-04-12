@@ -49,13 +49,6 @@ header {
 }
 
 
-.v-center {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-}
-
 /* KEY FEATURES */
 
 .overlap {
@@ -89,5 +82,24 @@ header {
 
     & .app-download img {
         height: 50px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .v-center {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    h1 {
+        font-size: 11vh;
+    }
+
+    h2 {
+        font-size: 6vh;
     }
 }

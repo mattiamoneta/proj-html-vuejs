@@ -169,16 +169,20 @@ export const store = reactive({
     menuFeatures: [
         {
             title: 'Vegetarian',
-            icon: 'fa-solid fa-leaf'
+            icon: 'fa-solid fa-leaf',
+            color: '#5ea331'
         }, {
             title: 'Gluten Free',
-            icon: 'fa-solid fa-seedling'
+            icon: 'fa-solid fa-seedling',
+            color: '#ffc30f'
         }, {
             title: 'Dairy Free',
-            icon: 'fa-solid fa-cow'
+            icon: 'fa-solid fa-cow',
+            color: '#44a2ea'
         }, {
             title: 'Keto Friendly',
-            icon: 'fa-solid fa-drumstick-bite'
+            icon: 'fa-solid fa-drumstick-bite',
+            color: '#994a0a'
         },
     ],
 

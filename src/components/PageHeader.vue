@@ -29,9 +29,20 @@ export default {
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item ms-4" v-for="link in store.linksNavbar">
-                            <a class="ms-nav-link" aria-current="page" :href="link.href">{{ link.title
+                        <li class="nav-item dropdown ms-4" v-for="link in store.linksNavbar">
+
+                            <a v-if="link.dropdown != undefined" class="ms-nav-link dropdown-toggle" aria-current="page"
+                                :href="link.href" data-bs-toggle="dropdown">{{
+                                    link.title
+                                }}</a>
+                            <a v-else class="ms-nav-link" aria-current="page" :href="link.href">{{
+                                link.title
                             }}</a>
+
+                            <ul class="dropdown-menu" v-if="link.dropdown != undefined">
+                                <li v-for="droplink in link.dropdown"><a class="dropdown-item" :href="droplink.url">{{
+                                    droplink.title }}</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item ms-4">
                             <a class="ms-nav-link" aria-current="page" href="#"><i

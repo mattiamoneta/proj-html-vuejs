@@ -103,7 +103,7 @@ export default {
         </section>
 
         <!-- News -->
-        <section class="py-5">
+        <section class="py-5 mb-5">
 
             <SectionTitle title="latest news" btnTitle="read more news" btnHref="#" />
 

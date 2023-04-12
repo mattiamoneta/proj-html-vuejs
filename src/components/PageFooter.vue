@@ -106,8 +106,8 @@ export default {
             <!-- Copyright -->
             <div class="row text-center mt-3 mb-5">
                 <p class="text-goldenrod small fw-bold">&copy; Copyright 2012-2023 | Avada Theme by <a href="#"
-                        class="text-white text-decoration-none">ThemeFusion</a> | All Rights Reserved | Powered by <a href="#"
-                        class="text-white text-decoration-none">Wordpress</a></p>
+                        class="text-white text-decoration-none">ThemeFusion</a> | All Rights Reserved | Powered by <a
+                        href="#" class="text-white text-decoration-none">Wordpress</a></p>
 
             </div>
         </div>

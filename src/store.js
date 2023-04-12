@@ -4,7 +4,19 @@ export const store = reactive({
     linksNavbar: [
         {
             title: 'Home',
-            url: '#'
+            url: '#',
+            dropdown: [
+                {
+                    title: 'Item1',
+                    url: '#'
+                }, {
+                    title: 'Item2',
+                    url: '#'
+                }, {
+                    title: 'Item3',
+                    url: '#'
+                },
+            ]
         }, {
             title: 'Order Online',
             url: '#'

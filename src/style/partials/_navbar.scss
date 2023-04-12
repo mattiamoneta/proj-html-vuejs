@@ -9,6 +9,10 @@
     padding: 8px 10px;
     transition: all .2s ease;
 
+    &:last-child {
+        padding-right: 0;
+    }
+
     &:hover {
         color: $ms-color-goldenrod;
         cursor: pointer;

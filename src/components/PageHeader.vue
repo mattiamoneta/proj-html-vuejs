@@ -44,7 +44,7 @@ export default {
                             aria-label="Close">&#x2715;</button>
                     </div>
                     <div class="offcanvas-body text-end">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-4 pe-lg-0">
                             <li class="nav-item dropdown ms-4 mb-4 mb-lg-0" v-for="link in store.linksNavbar">
                                 <a v-if="link.dropdown != undefined" class="ms-nav-link dropdown-toggle" aria-current="page"
                                     :href="link.href" data-bs-toggle="dropdown">{{

@@ -8,12 +8,18 @@ export default {
         return {
             store
         }
+    },
+    props: {
+        titleSmall: String,
+        titleBigWhite: String,
+        titleBigYellow: String,
+        jumboHeight: Number
     }
 }
 </script>
 
 <template>
-    <header class="vh-100">
+    <header :class="`vh-${jumboHeight}`">
         <div class="container h-100">
 
             <!-- Navbar -->
@@ -64,11 +70,11 @@ export default {
             </nav>
 
             <!-- Jumbotron -->
-            <div class="row">
+            <div class="row" v-if="titleSmall != undefined && titleBigWhite != undefined">
                 <div class="col-lg-5 v-center text-center text-sm-start">
-                    <h2 class="text-white text-slide-in-d2">Hungry?</h2>
-                    <h1 class="text-goldenrod mb-5 text-slide-in-d1">Great Food <span
-                            class="d-block text-white">Delivered</span></h1>
+                    <h2 class="text-white text-slide-in-d2">{{ titleSmall }}</h2>
+                    <h1 class="text-goldenrod mb-5 text-slide-in-d1">{{ titleBigYellow }} <span class="d-block text-white">{{
+                        titleBigWhite }}</span></h1>
                     <a href="#" class="btn-pill text-slide-in-d3 ">view our menu <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>

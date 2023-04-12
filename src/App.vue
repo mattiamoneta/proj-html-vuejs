@@ -24,7 +24,7 @@ export default {
 
 <template>
   <!-- Navbar & Jumbotron -->
-  <PageHeader />
+  <PageHeader titleSmall="Hungry?" titleBigYellow="Great Food" titleBigWhite="Delivered" jumboHeight="100" />
   <PageMain />
   <PageFooter />
 </template>

@@ -7,15 +7,21 @@ export const store = reactive({
             url: '#',
             dropdown: [
                 {
-                    title: 'Item1',
-                    url: '#'
+                    title: 'Features',
+                    url: '#section-keyfeatures'
                 }, {
-                    title: 'Item2',
-                    url: '#'
+                    title: 'Popular Dishes',
+                    url: '#section-dishes'
                 }, {
-                    title: 'Item3',
-                    url: '#'
-                },
+                    title: 'Menu',
+                    url: '#section-menu'
+                }, {
+                    title: 'App',
+                    url: '#bg-phone'
+                }, {
+                    title: 'News',
+                    url: '#section-news'
+                }
             ]
         }, {
             title: 'Order Online',

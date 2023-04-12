@@ -18,6 +18,11 @@ $def-padding: 10px 30px;
     transition: all .3s ease;
 }
 
+.btn-rounded.btn-rounded-cardinal {
+    background-color: $ms-color-cardinal;
+}
+
+
 .btn-pill {
     background-color: $ms-color-cardinal;
     color: white;

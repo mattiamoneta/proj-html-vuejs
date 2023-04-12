@@ -27,12 +27,13 @@ export default {
     <main>
 
         <!-- Service Key Features -->
-        <section class="overlap">
+        <section class="overlap" id="section-keyfeatures">
             <div class="container py-4 bg-white">
                 <div class="row text-center py-4">
                     <div v-for="feature in store.keyFeatures" class="col-lg col-sm-12">
-                        <h5 class="text-uppercase small text-secondary my-4 my-md-2 my-lg-0"><i :class="feature.icon" class="me-2"></i> {{
-                            feature.title }}</h5>
+                        <h5 class="text-uppercase small text-secondary my-4 my-md-2 my-lg-0"><i :class="feature.icon"
+                                class="me-2"></i> {{
+                                    feature.title }}</h5>
                     </div>
 
                 </div>
@@ -46,7 +47,7 @@ export default {
             <div class="container">
                 <div class="row">
                     <DishesCard v-for="dishes in store.popularDishes" :image="dishes.image" :caption="dishes.title"
-                        :price="dishes.price" />
+                        :price="dishes.price" id="section-dishes" />
                 </div>
 
                 <div class="row py-5">
@@ -63,7 +64,7 @@ export default {
 
 
         <!-- Menu -->
-        <section class="mb-5">
+        <section class="mb-5" id="section-menu">
             <SectionTitle title="menu categories" btnTitle="view the full menu" btnHref="#" />
 
             <div class="container">
@@ -103,7 +104,7 @@ export default {
         </section>
 
         <!-- News -->
-        <section class="py-5 mb-5">
+        <section class="py-5 mb-5" id="section-news">
 
             <SectionTitle title="latest news" btnTitle="read more news" btnHref="#" />
 

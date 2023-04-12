@@ -7,6 +7,11 @@ export default {
         return {
             store
         }
+    },
+    methods: {
+        scrollUp() {
+            window.scrollTo(0, 0)
+        }
     }
 }
 </script>
@@ -109,6 +114,15 @@ export default {
                         class="text-white text-decoration-none">ThemeFusion</a> | All Rights Reserved | Powered by <a
                         href="#" class="text-white text-decoration-none">Wordpress</a></p>
 
+            </div>
+
+            <!-- Scroll Top -->
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn-rounded btn-rounded-cardinal border-0" @click="scrollUp()">
+                        <i class="fa-solid fa-chevron-up"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </footer>

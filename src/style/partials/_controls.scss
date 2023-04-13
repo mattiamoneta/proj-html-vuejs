@@ -1,6 +1,7 @@
 @use './colors' as *;
 
 $def-padding: 10px 30px;
+$def-small-padding: 5px;
 
 /* CONTROLS */
 
@@ -22,6 +23,12 @@ $def-padding: 10px 30px;
     background-color: $ms-color-cardinal;
 }
 
+.btn-textual {
+    background-color: transparent;
+    color: $ms-color-cardinal;
+    border: 0;
+    text-decoration: none;
+}
 
 .btn-pill {
     background-color: $ms-color-cardinal;
@@ -35,6 +42,9 @@ $def-padding: 10px 30px;
     text-transform: uppercase;
     transition: all .3s ease;
 
+    &.small-control {
+        padding: $def-small-padding;
+    }
 
     &:hover {
         box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, .5);
@@ -43,10 +53,19 @@ $def-padding: 10px 30px;
 }
 
 
-input[type='email'] {
+input[type='email'],
+input[type='text'] {
     padding: $def-padding;
     border-radius: 25px;
     border: none;
+}
+
+input[type='email'].small-control,
+input[type='text'].small-control {
+    padding: $def-small-padding;
+    border-radius: 5px;
+    border: none;
+    font-size: .8rem;
 }
 
 /* Scrollbar */

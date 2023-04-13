@@ -218,5 +218,7 @@ export const store = reactive({
             thumbnail: 'new-milkshake-menu.jpg',
             content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe enim perferendis consectetur iste officiis modi, quasi quibusdam nisi reiciendis? Iusto.'
         }
-    ]
+    ],
+
+    showChat: false
 })

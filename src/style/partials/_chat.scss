@@ -1,0 +1,109 @@
+@use './colors' as *;
+
+/* CHAT */
+
+.chat-icon {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 998;
+
+    & .dropdown {
+        position: relative;
+        overflow: hidden;
+        display: none;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        height: 450px;
+        width: 300px;
+        background-color: white;
+        border: 1px solid $ms-color-silver;
+        border-radius: 10px;
+        box-shadow: -1px 5px 15px 5px rgba(0, 0, 0, 0.38);
+
+        & .dropdown-header {
+            position: relative;
+            background-color: $ms-color-cardinal;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+
+            & .close-btn {
+                position: absolute;
+                right: 15px;
+                border: 0;
+                background-color: transparent;
+                color: white;
+            }
+        }
+
+        & .dropdown-body {
+            overflow-y: auto;
+            height: 100%;
+            padding: 10px;
+
+            & ul {
+                list-style: none;
+                padding: 0;
+
+                & li {
+                    display: inline-block;
+                    margin: 3px 8px;
+                    border: 1px solid $ms-color-silver;
+                    border-radius: 8px;
+                    padding: 5px 8px;
+                    font-size: .85rem;
+                    background-color: gainsboro;
+                    box-shadow: inset 3px 3px 5px 2px rgba(#000, .1);
+
+                }
+            }
+        }
+
+        & .dropdown-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $ms-color-silver;
+            padding: 4px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & .chat-footer-text {
+                width: 85%;
+            }
+
+            & .chat-footer-send {
+                width: 15%;
+            }
+        }
+
+        &.shown {
+            display: inline-block;
+            animation: chat-in .3s ease;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .chat-icon .dropdown {
+        height: 100vh;
+        width: 100vw;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@keyframes chat-in {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

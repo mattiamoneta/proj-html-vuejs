@@ -6,6 +6,7 @@ import SectionTitle from './SectionTitle.vue';
 import DishesCard from './DishesCard.vue';
 import MenuCategory from './MenuCategory.vue';
 import BlogPost from './BlogPost.vue';
+import IdleChat from './IdleChat.vue';
 
 export default {
     name: 'PageMain',
@@ -23,14 +24,15 @@ export default {
         SectionTitle,
         DishesCard,
         MenuCategory,
-        BlogPost
+        BlogPost,
+        IdleChat
     }
 }
 </script>
 
 <template>
+    <IdleChat />
     <main>
-
         <!-- Service Key Features -->
         <section class="overlap" id="section-keyfeatures">
             <div class="container py-4 bg-white">

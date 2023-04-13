@@ -55,3 +55,9 @@
     }
 
 }
+
+@media screen and (max-width: 420px) {
+    .navbar-brand img {
+        height: 40px;
+    }
+}

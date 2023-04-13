@@ -10,6 +10,7 @@ export default {
 </script>
 
 <template>
+    <!-- Dynamic Title w/ cta button -->
     <div class="container py-5">
         <div class="row py-5">
             <div class="col-lg">

@@ -14,6 +14,11 @@ export default {
             store
         }
     },
+    methods: {
+        getImagePath(img) {
+            return new URL(`../assets/${img}`, import.meta.url).href;
+        }
+    },
     components: {
         SectionTitle,
         DishesCard,
@@ -29,8 +34,8 @@ export default {
         <!-- Service Key Features -->
         <section class="overlap" id="section-keyfeatures">
             <div class="container py-4 bg-white">
-                <div class="row text-center py-4">
-                    <div v-for="feature in store.keyFeatures" class="col-lg col-sm-12">
+                <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 text-center py-4">
+                    <div v-for="feature in store.keyFeatures" class="col">
                         <h5 class="text-uppercase small text-secondary my-4 my-md-2 my-lg-0"><i :class="feature.icon"
                                 class="me-2"></i> {{
                                     feature.title }}</h5>
@@ -46,31 +51,32 @@ export default {
 
             <div class="container">
                 <div class="row">
-                    <DishesCard v-for="dishes in store.popularDishes" :image="dishes.image" :caption="dishes.title"
-                        :price="dishes.price" id="section-dishes" />
+                    <DishesCard v-for="dishes in store.popularDishes" :image="getImagePath(dishes.image)"
+                        :caption="dishes.title" :price="dishes.price" id="section-dishes" />
                 </div>
 
                 <div class="row py-5">
                     <div class="col text-center">
-                        <a href="#" class="btn-pill">start your order <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#section-menu" class="btn-pill">start your order <i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
             <div class="container-fluid" id="order-discount">
-                <img src="/svg-0.svg" alt="" class="h-75">
+                <img :src="getImagePath('svg-0.svg')" alt="" class="h-75">
             </div>
         </section>
 
 
         <!-- Menu -->
         <section class="mb-5" id="section-menu">
-            <SectionTitle title="menu categories" btnTitle="view the full menu" btnHref="#" />
+            <SectionTitle title="menu categories" btnTitle="view the full menu" btnHref="#section-menu" />
 
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
                     <div class="col-lg" v-for="item in store.linksOrder">
-                        <MenuCategory :title="item.title" :image="item.image" />
+                        <MenuCategory :title="item.title" :image="getImagePath(item.image)" />
                     </div>
                 </div>
 
@@ -89,13 +95,14 @@ export default {
         <section id="bg-phone">
             <div class="container py-5">
                 <div class="row py-5">
-                    <div class="col">
+                    <div class="col text-md-start text-center">
                         <h4 class="text-white">Download Our</h4>
                         <h1 class="text-goldenrod">Ordering App</h1>
 
                         <div class="app-download mt-5">
-                            <a href="#"><img src="/app-store-badge.png" alt="App Store Download" class="me-3"></a>
-                            <a href="#"><img src="/play-store-badge.png" alt="Play Store Download"></a>
+                            <a href="#"><img :src="getImagePath('app-store-badge.png')" alt="App Store Download"
+                                    class="me-3"></a>
+                            <a href="#"><img :src="getImagePath('play-store-badge.png')" alt="Play Store Download"></a>
                         </div>
 
                     </div>
@@ -111,7 +118,7 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-lg col-12" v-for="post in store.posts">
-                        <BlogPost :title="post.title" :image="post.thumbnail" :content="post.content" />
+                        <BlogPost :title="post.title" :image="getImagePath(post.thumbnail)" :content="post.content" />
                     </div>
                 </div>
             </div>

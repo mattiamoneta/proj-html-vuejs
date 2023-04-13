@@ -10,6 +10,7 @@ export default {
 </script>
 
 <template>
+    <!-- Menu Card -->
     <div class="card text-bg-dark border-0 rounded-0 card-zoomin">
         <img :src="image" class="card-img" :alt="title">
         <div class="card-img-overlay overlay-transparent d-flex justify-content-center align-items-center">

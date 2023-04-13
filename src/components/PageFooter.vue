@@ -11,6 +11,9 @@ export default {
     methods: {
         scrollUp() {
             window.scrollTo(0, 0)
+        },
+        getImagePath(img) {
+            return new URL(`../assets/${img}`, import.meta.url).href;
         }
     }
 }
@@ -49,10 +52,10 @@ export default {
                             <a :href="link.href" class="footer-link-item">{{ link.title }}</a>
                         </li>
                         <li class="mt-4 mb-2">
-                            <a href="#"><img src="/app-store-badge.png" alt="AppStore"></a>
+                            <a href="#"><img :src="getImagePath('app-store-badge.png')" alt="AppStore"></a>
                         </li>
                         <li>
-                            <a href="#"><img src="/play-store-badge.png" alt="AppStore"></a>
+                            <a href="#"><img :src="getImagePath('play-store-badge.png')" alt="AppStore"></a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +73,7 @@ export default {
                 <!-- Voucher -->
                 <div class="col-lg col-xs-12 text-center pt-sm-5 pt-lg-0 mt-lg-0 mt-sm-5">
                     <h5 class="text-uppercase text-white small mb-4">voucher</h5>
-                    <img src="/footer-coupon.png" alt="Coupon" id="footer-coupon">
+                    <img :src="getImagePath('footer-coupon.png')" alt="Coupon" id="footer-coupon">
                     <div class="mt-3">
                         <span class="text-white fw-bold small">Just use the code</span>
                         <h5 class="text-goldenrod fix-mb">FIRSTORDER</h5>
@@ -82,7 +85,7 @@ export default {
             <!-- Logo -->
             <div class="row py-5">
                 <div class="col text-center">
-                    <img src="/takeout-logo.png" alt="Takeout Logo" class="footer-logo">
+                    <img :src="getImagePath('takeout-logo.png')" alt="Takeout Logo" class="footer-logo">
                 </div>
             </div>
 

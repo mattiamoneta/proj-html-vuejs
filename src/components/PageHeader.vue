@@ -9,6 +9,11 @@ export default {
             store
         }
     },
+    methods: {
+        getImagePath(img) {
+            return new URL(`../assets/${img}`, import.meta.url).href;
+        }
+    },
     props: {
         titleSmall: String,
         titleBigWhite: String,
@@ -25,11 +30,12 @@ export default {
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg py-5 navbar-dark">
                 <a class="navbar-brand" href="#">
-                    <img src="/takeout-logo.png" alt="takeout logo">
+                    <img :src="getImagePath('takeout-logo.png')" alt="takeout logo">
                 </a>
 
                 <button class="nav-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <!-- Custom Hamburger Menu -->
                     <span class="toggler-custom">
                         <div class="line-1"></div>
                         <div class="line-2"></div>
@@ -37,6 +43,7 @@ export default {
                     </span>
                 </button>
 
+                <!-- Navbar Side Menu -->
                 <div class="offcanvas offcanvas-end text-white bg-marshland" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -73,9 +80,11 @@ export default {
             <div class="row" v-if="titleSmall != undefined && titleBigWhite != undefined">
                 <div class="col-lg-5 v-center text-center text-sm-start">
                     <h2 class="text-white text-slide-in-d2">{{ titleSmall }}</h2>
-                    <h1 class="text-goldenrod mb-5 text-slide-in-d1">{{ titleBigYellow }} <span class="d-block text-white">{{
-                        titleBigWhite }}</span></h1>
-                    <a href="#" class="btn-pill text-slide-in-d3 ">view our menu <i class="fa-solid fa-arrow-right"></i></a>
+                    <h1 class="text-goldenrod mb-5 text-slide-in-d1">{{ titleBigYellow }} <span
+                            class="d-block text-white">{{
+                                titleBigWhite }}</span></h1>
+                    <a href="#section-menu" class="btn-pill text-slide-in-d3 py-3">view our menu <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

@@ -25,13 +25,13 @@ export const store = reactive({
             ]
         }, {
             title: 'Order Online',
-            url: '#'
+            url: '#bg-phone'
         }, {
             title: 'About',
             url: '#'
         }, {
             title: 'News',
-            url: '#'
+            url: '#section-news'
         }, {
             title: 'Contact Us',
             url: '#'
@@ -64,35 +64,35 @@ export const store = reactive({
     linksOrder: [
         {
             title: 'Appetizers',
-            image: '/appetizers-menu-background.jpg',
+            image: 'appetizers-menu-background.jpg',
             url: '#'
         }, {
             title: 'Burgers',
-            image: '/burgers-menu-background.jpg',
+            image: 'burgers-menu-background.jpg',
             url: '#'
         }, {
             title: 'Pizza',
-            image: '/pizza-menu-background.jpg',
+            image: 'pizza-menu-background.jpg',
             url: '#'
         }, {
             title: 'Fries',
-            image: '/fries-menu-background.jpg',
+            image: 'fries-menu-background.jpg',
             url: '#'
         }, {
             title: 'Sides',
-            image: '/sides-menu-background.jpg',
+            image: 'sides-menu-background.jpg',
             url: '#'
         }, {
             title: 'Desserts',
-            image: '/desserts-menu-background.jpg',
+            image: 'desserts-menu-background.jpg',
             url: '#'
         }, {
             title: 'Beverages',
-            image: '/beverages-menu-background.jpg',
+            image: 'beverages-menu-background.jpg',
             url: '#'
         }, {
             title: 'Specials',
-            image: '/specials-menu-background.jpg',
+            image: 'specials-menu-background.jpg',
             url: '#'
         },
     ],
@@ -194,15 +194,15 @@ export const store = reactive({
 
     popularDishes: [
         {
-            image: '/skin-on-fries.jpg',
+            image: 'skin-on-fries.jpg',
             title: 'Skin On Fries',
             price: '$3.00 - $6.00'
         }, {
-            image: '/choco-cookie-frappe.jpg',
+            image: 'choco-cookie-frappe.jpg',
             title: 'Choco Cookie Frappe',
             price: '$4.99'
         }, {
-            image: '/donut-burger.jpg',
+            image: 'donut-burger.jpg',
             title: 'The Donut Burger',
             price: '$6.99'
         },
@@ -211,11 +211,11 @@ export const store = reactive({
     posts: [
         {
             title: 'NEW: The Pancake Burger',
-            thumbnail: '/pancake-burger.jpg',
+            thumbnail: 'pancake-burger.jpg',
             content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe enim perferendis consectetur iste officiis modi, quasi quibusdam nisi reiciendis? Iusto.'
         }, {
             title: 'New Milkshake Menu',
-            thumbnail: '/new-milkshake-menu.jpg',
+            thumbnail: 'new-milkshake-menu.jpg',
             content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe enim perferendis consectetur iste officiis modi, quasi quibusdam nisi reiciendis? Iusto.'
         }
     ]

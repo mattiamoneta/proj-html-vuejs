@@ -18,7 +18,7 @@ export default {
         titleSmall: String,
         titleBigWhite: String,
         titleBigYellow: String,
-        jumboHeight: Number
+        jumboHeight: String
     }
 }
 </script>

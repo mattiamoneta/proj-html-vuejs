@@ -4,6 +4,7 @@
 @use './partials/footer' as *;
 @use './partials/animations' as *;
 @use './partials/chat' as *;
+@use './partials/carousel' as *;
 @use 'bootstrap' as *;
 
 *,
@@ -106,5 +107,11 @@ header {
 
     h2 {
         font-size: 6vh;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    h5.card-title {
+        font-size: 2rem;
     }
 }

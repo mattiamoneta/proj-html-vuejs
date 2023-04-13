@@ -1,0 +1,100 @@
+@use './colors' as *;
+
+/* CAROUSEL */
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    & .carousel-control {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        color: white;
+        border: none;
+        background-color: rgba($ms-color-marshland, 0.5);
+
+
+        &.carousel-prev {
+            position: absolute;
+            left: 0;
+            bottom: 50%;
+            transform: translateY(-50%);
+        }
+
+        &.carousel-next {
+            position: absolute;
+            right: 0;
+            bottom: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    & .carousel-inner {
+        width: 90%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        padding-left: 0;
+
+
+        & li {
+            list-style: none;
+        }
+
+        & .card-wrapper {
+            width: 380px;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+
+    }
+}
+
+.card-img-overlay.hoverable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease;
+    opacity: 0;
+
+}
+
+.card-img-overlay.hoverable:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+@media screen and (max-width: 992px) {
+
+    .carousel .carousel-inner {
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .carousel .carousel-inner .card-wrapper {
+        width: 320px;
+    }
+
+    // .carousel .carousel-control.carousel-prev {
+    //     bottom: 15px;
+    //     left: 30px;
+    // }
+
+    // .carousel .carousel-control.carousel-next {
+    //     bottom: 15px;
+    //     right: 30px;
+    // }
+
+    .carousel .carousel-control.carousel-prev,
+    .carousel .carousel-control.carousel-next {
+        display: none;
+    }
+
+
+}

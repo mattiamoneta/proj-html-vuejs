@@ -7,6 +7,7 @@ import DishesCard from './DishesCard.vue';
 import MenuCategory from './MenuCategory.vue';
 import BlogPost from './BlogPost.vue';
 import IdleChat from './IdleChat.vue';
+import DishesCarousel from './DishesCarousel.vue';
 
 export default {
     name: 'PageMain',
@@ -25,7 +26,8 @@ export default {
         DishesCard,
         MenuCategory,
         BlogPost,
-        IdleChat
+        IdleChat,
+        DishesCarousel
     }
 }
 </script>
@@ -52,9 +54,12 @@ export default {
             <SectionTitle title="our most popular dishes" />
 
             <div class="container">
-                <div class="row">
+                <!-- <div class="row">
                     <DishesCard v-for="dishes in store.popularDishes" :image="getImagePath(dishes.image)"
                         :caption="dishes.title" :price="dishes.price" id="section-dishes" />
+                </div> -->
+                <div class="row">
+                     <DishesCarousel id="section-dishes"/>
                 </div>
 
                 <div class="row py-5">

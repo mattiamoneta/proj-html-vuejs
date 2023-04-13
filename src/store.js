@@ -205,6 +205,22 @@ export const store = reactive({
             image: 'donut-burger.jpg',
             title: 'The Donut Burger',
             price: '$6.99'
+        }, {
+            image: 'choco-cookie-frappe.jpg',
+            title: 'Choco Cookie Frappe',
+            price: '$4.99'
+        }, {
+            image: 'donut-burger.jpg',
+            title: 'The Donut Burger',
+            price: '$6.99'
+        }, {
+            image: 'skin-on-fries.jpg',
+            title: 'Skin On Fries',
+            price: '$3.00 - $6.00'
+        }, {
+            image: 'donut-burger.jpg',
+            title: 'The Donut Burger',
+            price: '$6.99'
         },
     ],
 
